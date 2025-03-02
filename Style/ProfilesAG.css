@@ -234,10 +234,10 @@ h1{
     }
 
     .load-bar{
-        margin: 0;
+        margin: 5;
     }
     .profile__skill-container h2{
-        margin: 0;
+        margin: 5;
     }
 }
 
