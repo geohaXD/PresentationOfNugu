@@ -30,22 +30,29 @@ div, ul, nav, header, footer, a, li, label{
     width: 64px;
 }
 
-.header__open-nav-button{
+.header__open-nav-button {
     color: #6a0dad;
     font-size: 3rem;
     font-weight: 600;
     position: absolute;
     right: 10px;
+    top: 10px;
+    z-index: 10;
+    cursor: pointer;
 }
 
-.header__nav{
-    display: none;
+
+
+.header__nav {
     background-color: #fff;
     position: absolute;
     height: 100vh;
     width: 100vw;
     top: 0;
-    z-index: -1;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 5;
 }
 
 .header__nav-list{
@@ -56,7 +63,8 @@ div, ul, nav, header, footer, a, li, label{
     justify-content: space-evenly;
 }
 
-.header__checkbox:checked ~ .header__nav{
+.header__checkbox:checked ~ .header__nav {
+    transform: translateX(0);
     display: flex;
 }
 
@@ -153,6 +161,9 @@ h1{
     width: 80%;
     margin: 4px;
     margin-left: 0;
+    margin: 0;
+    margin-right: 4px;
+
 }
 
 .profile__skill{
@@ -195,6 +206,9 @@ h1{
     width: 10%;
 }
 
+.profile__skill-container h2{
+    margin: 0;
+}
 /* ----------- Profile Queries ----------- */
 
 
@@ -235,6 +249,7 @@ h1{
 
     .load-bar{
         margin: 0;
+        margin-right: 4px;
     }
     .profile__skill-container h2{
         margin: 0;
